@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>אתר לדוגמה</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <a href="https://www.youtube.com/channel/UCID123456789" class="login-button">התחברות</a>
+      <a href="/" class="logo">
+        <img src="logo.jpg" width="230" height="100">
+      </a>
+      <nav class="menu">
+        <a href="#">קיצור דרך 1</a>
+        <a href="#">קיצור דרך 2</a>
+        <a href="#">קיצור דרך 3</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="container">
+      <p>ברוכים הבאים לאתר שלי!</p>
+      <p>אתר זה מוקדש ל...</p>
+      <p>...</p>
+      <section class="categories">
+        <a href="#">
+          <div class="category">
+            <img src="category1.png" alt="קטגוריה 1">
+            <h3>כותרת קטגוריה 1</h3>
+          </div>
+        </a>
+        <a href="#">
+          <div class="category">
+            <img src="category2.png" alt="קטגוריה 2">
+            <h3>כותרת קטגוריה 2</h3>
+          </div>
+        </a>
+        <a href="#">
+          <div class="category">
+            <img src="category3.png" alt="קטגוריה 3">
+            <h3>כותרת קטגוריה 3</h3>
+          </div>
+        </a>
+        <iframe width="300" height="150" src="https://www.youtube.com/embed/Ilk-09ACPP4" title="סט מקפיץ לפורים 2024 🎭| 2 | עדלאידע תשפ&#39;&#39;ד | A spring set for Purim 🪩 (נריה מיוזיק | Neriya Music)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+       </section>
+    </div>
+  </main>
+  <html>
+  <head>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                overflow-x: hidden;
+            }
+            #menuIcon {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                cursor: pointer;
+                z-index: 999;
+            }
+            #closeIcon {
+                display: none;
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                cursor: pointer;
+                z-index: 999;
+            }
+            #menu {
+                display: none;
+                position: fixed;
+                top: 50px;
+                right: 20px;
+                width: 4cm;
+                background: rgba(255, 255, 255, 0.9);
+                z-index: 500;
+                padding: 20px;
+                box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+            }
+            .menuItem {
+                margin-bottom: 10px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+      <div id="menuIcon">&#9776;</div>
+      <div id="closeIcon">X</div>
+        
+        <div id="menu">
+            <div class="menuItem" data-target="section1">Section 1</div>
+            <div class="menuItem" data-target="section2">Section 2</div>
+            <div class="menuItem" data-target="section3">Section 3</div>
+        </div>
+    
+        
+        <script>
+            const menuIcon = document.getElementById('menuIcon');
+            const closeIcon = document.getElementById('closeIcon');
+            const menu = document.getElementById('menu');
+    
+            menuIcon.addEventListener('click', function() {
+            menu.style.display = 'block';
+            menuIcon.style.display = 'none';
+            closeIcon.style.display = 'block';
+        });
+
+        closeIcon.addEventListener('click', function() {
+            menu.style.display = 'none';
+            menuIcon.style.display = 'block';
+            closeIcon.style.display = 'none';
+        });
+
+        document.querySelectorAll('.menuItem').forEach(item => {
+            item.addEventListener('click', function() {
+                let target = this.getAttribute('data-target');
+                document.getElementById(target).scrollIntoView({ behavior: 'smooth' });
+                menu.style.display = 'none';
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+        <section id="section1" style="height: 100vh; background: #f0f0f0;">Section 1 Content</section>
+        <section id="section2" style="height: 100vh; background: #e0e0e0;">Section 2 Content</section>
+        <section id="section3" style="height: 100vh; background: #d0d0d0;">Section 3 Content</section>
+    
